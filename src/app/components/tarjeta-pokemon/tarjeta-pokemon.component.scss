@@ -1,0 +1,89 @@
+:host{
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    align-items: center;
+    isolation: isolate;
+    & .selected::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 120%;
+        left: 0px;
+        background-color: #DA4443;
+        box-shadow: 0 1px 4px #1e2023;
+        z-index: -1;
+        border-radius: 5px;
+    }
+}
+
+#flecha{
+    height: 20px;
+    padding: 0 7px;
+}
+
+#tarjeta{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #FCEAB8;
+    border-radius: 25px 5px 5px 25px;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    padding: 4px;
+    gap: 1rem;
+    img{
+        object-fit: cover;
+    }
+}
+
+header{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+img{
+    max-width: 40px;
+}
+
+:host #tarjeta.selected{
+    outline: 2px #FCEAB8 solid;
+    background-color: #f49545;
+}
+
+input{
+    border-radius: 50%;
+    height: 30px;
+    aspect-ratio: 1;
+    background-color: rgba(0, 0, 0, 0.125);
+}
+
+.checkbox-container {
+    display: flex;
+    height: 100%;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #efdba4;
+    border-radius: 50%;
+}
+
+.checkbox-container input:checked + .checkmark {
+    background-image: url(https://img.icons8.com/fluency/154/pokeball.png);
+    background-position: center center;
+    background-size: contain;
+}

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
 
+
+
 header{
     height: 80px;
     display: flex;
@@ -7,7 +9,8 @@ header{
     justify-content: space-between;
     padding: 0 0 0 20px;
     background: #6087ff;
-    background: linear-gradient(90deg, rgba(97,136,255,1) 66%, rgba(113,164,243,1) 67%, rgba(139,190,239,1) 98%, rgba(139,190,239,1) 99%, rgba(171,218,251,1) 100%);
+    background: linear-gradient(90deg, #6188ff 66%, rgba(113,164,243,1) 67%,
+    rgba(113,164,243,1) 98%, rgba(139,190,239,1) 98%, rgba(139,190,239,1) 99%, rgba(171,218,251,1) 99%, rgba(171,218,251,1) 100%);
 }
 
 #orderContainer{
@@ -17,7 +20,7 @@ header{
     justify-content: center;
     text-align: center;
     div{
-        width: 350px;
+        width: 50%;
         box-shadow: 0 -1px 4px #1e2023;
         &:hover{
             background-color: #4f8ff5;
