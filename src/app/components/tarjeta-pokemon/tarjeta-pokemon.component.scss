@@ -1,10 +1,10 @@
-:host{
+.container{
     display: flex;
     box-sizing: border-box;
     position: relative;
     align-items: center;
     isolation: isolate;
-    & .selected::before{
+    &.selected::before{
         position: absolute;
         content: "";
         width: 100%;
@@ -48,7 +48,7 @@ img{
     max-width: 40px;
 }
 
-:host #tarjeta.selected{
+.container.selected #tarjeta{
     outline: 2px #FCEAB8 solid;
     background-color: #f49545;
 }

@@ -1,1 +1,3 @@
-<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/151.png"/>
+<div class="container">
+    <img *ngIf="selectedPokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{{selectedPokemon.id}}.png"/>
+</div>

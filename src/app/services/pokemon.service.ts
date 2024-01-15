@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Pokeapi, result } from '../interfaces/pokeapi';
+import { result } from '../interfaces/pokeapi';
+import { Pokemon } from '../interfaces/pokemon';
+
 
 @Injectable({
   providedIn: 'root'
@@ -16,10 +18,8 @@ export class PokemonService {
     return [];
   }
 
-  async getById(id: number){
+  async getById(id: string): Promise<Pokemon>{
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-    const json = await res.json();
-    return json;
+    return await res.json();
   }
-
 }

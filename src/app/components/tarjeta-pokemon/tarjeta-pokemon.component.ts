@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { result } from '../../interfaces/pokeapi';
 
@@ -11,7 +11,9 @@ import { result } from '../../interfaces/pokeapi';
 })
 export class TarjetaPokemonComponent {
   @Input() data?:result;
-  
+  @Input() selected = false;  
+  @Output() clickTarjeta = new EventEmitter<string>();  
+
   ngOnChanges(): void{
     this.extraerInformacion();
   }

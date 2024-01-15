@@ -1,14 +1,16 @@
-<img src="./../../../assets/flecha.png" alt="flecha" id="flecha"/>
-<div id="tarjeta">
-    <header>
-        <label class="checkbox-container">
-            <input type="checkbox"/>
-            <span class="checkmark"></span>
-        </label>
-        <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/{{id}}.png' alt=""/>
-    </header>
-    <span>No. {{('000'+ id).substring(id.length)}}</span>
-    @if(data){
-        <span>{{data.name | titlecase}}</span>
-    }
+<div class="container" [ngClass]="(selected) ? 'selected' : ''" (click)="clickTarjeta.emit(id)">
+    <img src="./../../../assets/flecha.png" alt="flecha" id="flecha"/>
+    <div id="tarjeta">
+        <header>
+            <label class="checkbox-container">
+                <input type="checkbox"/>
+                <span class="checkmark"></span>
+            </label>
+            <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/{{id}}.png' alt=""/>
+        </header>
+        <span>No. {{('000'+ id).substring(id.length)}}</span>
+        @if(data){
+            <span>{{data.name | titlecase}}</span>
+        }
+    </div>
 </div>
