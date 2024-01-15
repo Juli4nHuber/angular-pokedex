@@ -11,6 +11,7 @@ import { result } from '../../interfaces/pokeapi';
 })
 export class TarjetaPokemonComponent {
   @Input() data?:result;
+  
   ngOnChanges(): void{
     this.extraerInformacion();
   }

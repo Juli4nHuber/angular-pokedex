@@ -8,5 +8,7 @@
         <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/{{id}}.png' alt=""/>
     </header>
     <span>No. {{('000'+ id).substring(id.length)}}</span>
-    <span *ngIf="data">{{data.name | titlecase}}</span>
+    @if(data){
+        <span>{{data.name | titlecase}}</span>
+    }
 </div>

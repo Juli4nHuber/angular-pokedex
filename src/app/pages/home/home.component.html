@@ -2,7 +2,7 @@
     <section>
         <app-foto-pokemon></app-foto-pokemon>
     </section>
-    <section>
+    <section (scroll)="onScroll($event)">
         @for (pokemon of listaPokemon; track pokemon.url) {
             <app-tarjeta-pokemon [data]="pokemon"></app-tarjeta-pokemon>
         }
